@@ -8,7 +8,6 @@ const BlockName = ({ attributes }) => {
 				tagName={headingTag}
 				value={heading}
 				className="main-heading"
-
 			/>
 			<RichText.Content
 				tagName="p"

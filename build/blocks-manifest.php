@@ -22,6 +22,10 @@ return array(
 				'type' => 'string',
 				'default' => 'Welcome to Our Web Experience'
 			),
+			'headingColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
 			'description' => array(
 				'type' => 'string',
 				'default' => 'Beautiful UI sections, interactive features, and smooth animations.'
@@ -29,6 +33,104 @@ return array(
 			'buttonText' => array(
 				'type' => 'string',
 				'default' => 'Get Started'
+			),
+			'buttonUrl' => array(
+				'type' => 'string',
+				'default' => '#'
+			),
+			'headingFontFamily' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'headingFontSizeDesktop' => array(
+				'type' => 'number',
+				'default' => 40
+			),
+			'headingFontSizeTablet' => array(
+				'type' => 'number',
+				'default' => 28
+			),
+			'headingFontSizeMobile' => array(
+				'type' => 'number',
+				'default' => 22
+			),
+			'headingFontWeight' => array(
+				'type' => 'string',
+				'default' => '700'
+			),
+			'headingTextTransform' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'headingLineHeightDesktop' => array(
+				'type' => 'number',
+				'default' => 1.1
+			),
+			'headingLineHeightTablet' => array(
+				'type' => 'number',
+				'default' => 1.2
+			),
+			'headingLineHeightMobile' => array(
+				'type' => 'number',
+				'default' => 1.3
+			),
+			'headingPadding' => array(
+				'type' => 'object',
+				'default' => array(
+					'desktop' => array(
+						'top' => '0',
+						'right' => '0',
+						'bottom' => '0',
+						'left' => '0',
+						'unit' => 'px',
+						'isLinked' => true
+					),
+					'tablet' => array(
+						'top' => '0',
+						'right' => '0',
+						'bottom' => '0',
+						'left' => '0',
+						'unit' => 'px',
+						'isLinked' => true
+					),
+					'mobile' => array(
+						'top' => '0',
+						'right' => '0',
+						'bottom' => '0',
+						'left' => '0',
+						'unit' => '0',
+						'isLinked' => true
+					)
+				)
+			),
+			'headingMargin' => array(
+				'type' => 'object',
+				'default' => array(
+					'desktop' => array(
+						'top' => 0,
+						'right' => 0,
+						'bottom' => 0,
+						'left' => 0,
+						'unit' => 'px',
+						'isLinked' => false
+					),
+					'tablet' => array(
+						'top' => 0,
+						'right' => 0,
+						'bottom' => 0,
+						'left' => 0,
+						'unit' => 'px',
+						'isLinked' => false
+					),
+					'mobile' => array(
+						'top' => 0,
+						'right' => 0,
+						'bottom' => 0,
+						'left' => 0,
+						'unit' => 'px',
+						'isLinked' => false
+					)
+				)
 			)
 		),
 		'supports' => array(
@@ -37,6 +139,11 @@ return array(
 				'left',
 				'right',
 				'full'
+			),
+			'color' => array(
+				'background' => true,
+				'gradients' => true,
+				'text' => false
 			)
 		),
 		'textdomain' => 'call-to-action-block',
