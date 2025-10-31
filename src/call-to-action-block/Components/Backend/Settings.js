@@ -3,10 +3,11 @@ import { InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, SelectControl, TextControl } from '@wordpress/components';
 import { TypographyControl } from './Style/TypographyControl';
 import ColorControl from './Style/ColorControl';
-function Settings( { attributes, setAttributes } ) {
-	const { headingTag, alignment, headingColor, buttonText, buttonUrl } = attributes;
-    {/* Inspector Settings */}
-    return(
+import DimensionControl from './Style/DimensionControl';
+function Settings({ attributes, setAttributes }) {
+    const { headingTag, alignment, headingColor, buttonText, buttonUrl, headingPadding, headingMargin } = attributes;
+    {/* Inspector Settings */ }
+    return (
         <>
             <InspectorControls>
                 <PanelBody title={__('General', 'call-to-action-block')} initialOpen={true}>
@@ -34,13 +35,13 @@ function Settings( { attributes, setAttributes } ) {
                         onChange={(value) => setAttributes({ headingTag: value })}
                     />
                     <TypographyControl attributes={attributes} setAttributes={setAttributes} prefix="heading" />
-                    <ColorControl 
-						label={__('Color', 'call-to-action-block')}
-						value={headingColor}
-						onChange={(color) => setAttributes({ headingColor: color })}
-						defaultColor=""
-						className="color-picker-control"
-					/>
+                    <ColorControl
+                        label={__('Color', 'call-to-action-block')}
+                        value={headingColor}
+                        onChange={(color) => setAttributes({ headingColor: color })}
+                        defaultColor=""
+                        className="color-picker-control"
+                    />
                 </PanelBody>
                 <PanelBody title={__('Button', 'call-to-action-block')} initialOpen={false}>
                     <TextControl
@@ -58,6 +59,16 @@ function Settings( { attributes, setAttributes } ) {
             <InspectorControls group="styles">
                 <PanelBody title={__('Button', 'call-to-action-block')} initialOpen={false}>
                     <TypographyControl attributes={attributes} setAttributes={setAttributes} prefix="button" />
+                    <DimensionControl
+                        label="Padding"
+                        value={headingPadding}
+                        onChange={(newVal) => setAttributes({ headingPadding: newVal })}
+                    />
+                    <DimensionControl
+                        label="Margin"
+                        value={headingMargin}
+                        onChange={(newVal) => setAttributes({ headingMargin: newVal })}
+                    />
                 </PanelBody>
             </InspectorControls>
         </>

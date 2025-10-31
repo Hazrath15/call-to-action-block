@@ -3,6 +3,7 @@ import { __ } from '@wordpress/i18n';
 import { useBlockProps, RichText } from '@wordpress/block-editor';
 import './editor.scss';
 import Settings from './Components/Backend/Settings';
+import Style from './Style';
 
 export default function Edit({ attributes, setAttributes }) {
 	const { headingTag, heading, description, buttonText } = attributes;
@@ -12,6 +13,7 @@ export default function Edit({ attributes, setAttributes }) {
 		<div { ...useBlockProps() }>
 
 			<Settings attributes={attributes} setAttributes={setAttributes} />
+			<Style attributes={attributes} />
 			<div className={`callToActionBlock`}>
 				<div className="hero-content">
 					<RichText

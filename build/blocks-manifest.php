@@ -98,7 +98,7 @@ return array(
 						'right' => '0',
 						'bottom' => '0',
 						'left' => '0',
-						'unit' => '0',
+						'unit' => 'px',
 						'isLinked' => true
 					)
 				)
@@ -112,7 +112,7 @@ return array(
 						'bottom' => 0,
 						'left' => 0,
 						'unit' => 'px',
-						'isLinked' => false
+						'isLinked' => true
 					),
 					'tablet' => array(
 						'top' => 0,
@@ -120,7 +120,7 @@ return array(
 						'bottom' => 0,
 						'left' => 0,
 						'unit' => 'px',
-						'isLinked' => false
+						'isLinked' => true
 					),
 					'mobile' => array(
 						'top' => 0,
@@ -128,7 +128,7 @@ return array(
 						'bottom' => 0,
 						'left' => 0,
 						'unit' => 'px',
-						'isLinked' => false
+						'isLinked' => true
 					)
 				)
 			)
