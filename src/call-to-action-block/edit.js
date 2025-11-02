@@ -31,7 +31,7 @@ export default function Edit({ attributes, setAttributes }) {
 						placeholder="Description..."
 						className="description"
 					/>
-					<button className="cta-button" onClick={() => setAttributes({ buttonText: 'Click me' })}>
+					<button className="cta-button">
 						{buttonText}
 					</button>
 				</div>

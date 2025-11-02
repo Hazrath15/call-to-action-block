@@ -42,6 +42,9 @@
   cursor: pointer;
   transition: all 0.3s ease;
 }
+.cta-button:focus {
+  outline: none;
+}
 .cta-button:hover {
   background-color: #00b89c;
   transform: scale(1.05);

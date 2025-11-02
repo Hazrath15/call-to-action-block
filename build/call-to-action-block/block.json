@@ -9,6 +9,10 @@
   "description": "A simple, customizable call-to-action block for Gutenberg.",
   "example": {},
   "attributes": {
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
     "headingTag": {
       "type": "string",
       "default": "h2"
@@ -18,6 +22,10 @@
       "default": "Welcome to Our Web Experience"
     },
     "headingColor": {
+      "type": "string",
+      "default": ""
+    },
+    "descriptionColor": {
       "type": "string",
       "default": ""
     },
@@ -32,6 +40,64 @@
     "buttonUrl": {
       "type": "string",
       "default": "#"
+    },
+    "sectionPadding": {
+      "type": "object",
+      "default": {
+        "desktop": {
+          "top": "100",
+          "right": "0",
+          "bottom": "100",
+          "left": "0",
+          "unit": "px",
+          "isLinked": true
+        },
+        "tablet": {
+          "top": "70",
+          "right": "0",
+          "bottom": "70",
+          "left": "0",
+          "unit": "px",
+          "isLinked": true
+        },
+        "mobile": {
+          "top": "50",
+          "right": "0",
+          "bottom": "50",
+          "left": "0",
+          "unit": "px",
+          "isLinked": true
+        }
+      }
+    },
+    "sectionMargin": {
+      "type": "object",
+      "default": {
+        "desktop": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0,
+          "unit": "px",
+          "isLinked": true
+        },
+        "tablet": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0,
+          "unit": "px",
+          "isLinked": true
+        },
+        "mobile": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0,
+          "unit": "px",
+          "isLinked": true
+        }
+      }
     },
     "headingFontFamily": {
       "type": "string",
@@ -75,30 +141,124 @@
         "desktop": {
           "top": "0",
           "right": "0",
-          "bottom": "0",
+          "bottom": "10",
           "left": "0",
           "unit": "px",
-          "isLinked": true
+          "isLinked": false
         },
         "tablet": {
           "top": "0",
           "right": "0",
-          "bottom": "0",
+          "bottom": "10",
           "left": "0",
           "unit": "px",
-          "isLinked": true
+          "isLinked": false
         },
         "mobile": {
           "top": "0",
           "right": "0",
-          "bottom": "0",
+          "bottom": "10",
           "left": "0",
           "unit": "px",
-          "isLinked": true
+          "isLinked": false
         }
       }
     },
     "headingMargin": {
+      "type": "object",
+      "default": {
+        "desktop": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0,
+          "unit": "px",
+          "isLinked": false
+        },
+        "tablet": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0,
+          "unit": "px",
+          "isLinked": false
+        },
+        "mobile": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0,
+          "unit": "px",
+          "isLinked": false
+        }
+      }
+    },
+    "descriptionFontFamily": {
+      "type": "string",
+      "default": ""
+    },
+    "descriptionFontSizeDesktop": {
+      "type": "number",
+      "default": 18
+    },
+    "descriptionFontSizeTablet": {
+      "type": "number",
+      "default": 18
+    },
+    "descriptionFontSizeMobile": {
+      "type": "number",
+      "default": 16
+    },
+    "descriptionFontWeight": {
+      "type": "string",
+      "default": ""
+    },
+    "descriptionTextTransform": {
+      "type": "string",
+      "default": "none"
+    },
+    "descriptionLineHeightDesktop": {
+      "type": "number",
+      "default": 1.1
+    },
+    "descriptionLineHeightTablet": {
+      "type": "number",
+      "default": 1.2
+    },
+    "descriptionLineHeightMobile": {
+      "type": "number",
+      "default": 1.3
+    },
+    "descriptionPadding": {
+      "type": "object",
+      "default": {
+        "desktop": {
+          "top": "0",
+          "right": "0",
+          "bottom": "30",
+          "left": "0",
+          "unit": "px",
+          "isLinked": false
+        },
+        "tablet": {
+          "top": "0",
+          "right": "0",
+          "bottom": "30",
+          "left": "0",
+          "unit": "px",
+          "isLinked": false
+        },
+        "mobile": {
+          "top": "0",
+          "right": "0",
+          "bottom": "30",
+          "left": "0",
+          "unit": "px",
+          "isLinked": false
+        }
+      }
+    },
+    "descriptionMargin": {
       "type": "object",
       "default": {
         "desktop": {
@@ -126,6 +286,128 @@
           "isLinked": true
         }
       }
+    },
+    "buttonFontFamily": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonFontSizeDesktop": {
+      "type": "number",
+      "default": 16
+    },
+    "buttonFontSizeTablet": {
+      "type": "number",
+      "default": 16
+    },
+    "buttonFontSizeMobile": {
+      "type": "number",
+      "default": 16
+    },
+    "buttonFontWeight": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonTextTransform": {
+      "type": "string",
+      "default": "none"
+    },
+    "buttonLineHeightDesktop": {
+      "type": "number",
+      "default": 1.1
+    },
+    "buttonLineHeightTablet": {
+      "type": "number",
+      "default": 1.2
+    },
+    "buttonLineHeightMobile": {
+      "type": "number",
+      "default": 1.3
+    },
+    "buttonPadding": {
+      "type": "object",
+      "default": {
+        "desktop": {
+          "top": "12",
+          "right": "21",
+          "bottom": "12",
+          "left": "21",
+          "unit": "px",
+          "isLinked": false
+        },
+        "tablet": {
+          "top": "12",
+          "right": "21",
+          "bottom": "12",
+          "left": "21",
+          "unit": "px",
+          "isLinked": false
+        },
+        "mobile": {
+          "top": "12",
+          "right": "21",
+          "bottom": "12",
+          "left": "21",
+          "unit": "px",
+          "isLinked": false
+        }
+      }
+    },
+    "buttonMargin": {
+      "type": "object",
+      "default": {
+        "desktop": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0,
+          "unit": "px",
+          "isLinked": false
+        },
+        "tablet": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0,
+          "unit": "px",
+          "isLinked": false
+        },
+        "mobile": {
+          "top": 0,
+          "right": 0,
+          "bottom": 0,
+          "left": 0,
+          "unit": "px",
+          "isLinked": false
+        }
+      }
+    },
+    "buttonTextColor": {
+      "type": "string",
+      "default": ""
+    },
+    "buttonBgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "bgType": {
+      "type": "string",
+      "default": "gradient"
+    },
+    "bgColor": {
+      "type": "string",
+      "default": ""
+    },
+    "bgGradient1": {
+      "type": "string",
+      "default": ""
+    },
+    "bgGradient2": {
+      "type": "string",
+      "default": ""
+    },
+    "bgGradientAngle": {
+      "type": "number",
+      "default": 90
     }
   },
   "supports": {
@@ -134,12 +416,7 @@
       "left",
       "right",
       "full"
-    ],
-    "color": {
-      "background": true,
-      "gradients": true,
-      "text": false
-    }
+    ]
   },
   "textdomain": "call-to-action-block",
   "editorScript": "file:./index.js",

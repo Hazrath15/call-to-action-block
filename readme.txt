@@ -1,19 +1,40 @@
 === Call To Action Block ===
 Contributors:      hazrathali
-Tags:              block
-Tested up to:      6.7
+Tags:              call-to-action, cta, gutenberg-block, marketing, landing-page,
+Requires at least: 6.7
+Tested up to:      6.8
 Stable tag:        0.1.0
+Requires PHP:      7.4
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-Example block scaffolded with Create Block tool.
+A sleek, customizable Call to Action block for Gutenberg — perfect for driving clicks, signups, and conversions.
 
 == Description ==
 
-A powerful and customizable Gutenberg block that helps you create attention-grabbing <code>call-to-action</code> sections with ease. Designed for modern WordPress websites, this block allows you to showcase messages, buttons, and offers that drive user engagement and conversions.
+Need to **grab attention and inspire action**? The **Call To Action Block** makes it effortless.
 
-For backwards compatibility, if this section is missing, the full length of the short description will be used, and
-Markdown parsed.
+Whether you're promoting a product, collecting leads, or guiding visitors to your best content, this block gives you everything you need — beautifully styled and fully responsive — right inside the Gutenberg editor.
+
+### Key Features:
+- **Bold headings** with full typography control
+- **Rich descriptions** to tell your story
+- **Customizable button** with link, style, and hover effects
+- **Flexible background**: solid color or smooth gradient
+- **Full responsive controls** (desktop, tablet, mobile)
+- **Padding & margin controls** with linked values
+- **Lightweight & fast** — no bloat, no jQuery
+
+Perfect for:
+- Landing pages
+- Sales sections
+- Email capture forms
+- Product promotions
+- Event announcements
+
+> **Built for speed, designed for conversions.**
+
+No extra page builders needed — just drop, style, and convert.
 
 == Installation ==
 
@@ -29,16 +50,6 @@ Follow these steps to install and use the Call To Action block:
 Requirements:
 - WordPress 6.0+ and PHP 7.4+.
 - The Block Editor (Gutenberg) enabled.
-
-Troubleshooting:
-- If assets don’t load, clear any caching and hard-refresh the browser.
-- If you are working from source, run `npm install` and `npm run build`, then ensure the contents of the `build/` directory are present.
-
-
-e.g.
-
-1. Upload the plugin files to the `/wp-content/plugins/call-to-action-block` directory, or install the plugin through the WordPress plugins screen directly.
-1. Activate the plugin through the 'Plugins' screen in WordPress
 
 
 == Frequently Asked Questions ==

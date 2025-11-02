@@ -14,6 +14,10 @@ return array(
 			
 		),
 		'attributes' => array(
+			'alignment' => array(
+				'type' => 'string',
+				'default' => 'center'
+			),
 			'headingTag' => array(
 				'type' => 'string',
 				'default' => 'h2'
@@ -23,6 +27,10 @@ return array(
 				'default' => 'Welcome to Our Web Experience'
 			),
 			'headingColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'descriptionColor' => array(
 				'type' => 'string',
 				'default' => ''
 			),
@@ -37,6 +45,64 @@ return array(
 			'buttonUrl' => array(
 				'type' => 'string',
 				'default' => '#'
+			),
+			'sectionPadding' => array(
+				'type' => 'object',
+				'default' => array(
+					'desktop' => array(
+						'top' => '100',
+						'right' => '0',
+						'bottom' => '100',
+						'left' => '0',
+						'unit' => 'px',
+						'isLinked' => true
+					),
+					'tablet' => array(
+						'top' => '70',
+						'right' => '0',
+						'bottom' => '70',
+						'left' => '0',
+						'unit' => 'px',
+						'isLinked' => true
+					),
+					'mobile' => array(
+						'top' => '50',
+						'right' => '0',
+						'bottom' => '50',
+						'left' => '0',
+						'unit' => 'px',
+						'isLinked' => true
+					)
+				)
+			),
+			'sectionMargin' => array(
+				'type' => 'object',
+				'default' => array(
+					'desktop' => array(
+						'top' => 0,
+						'right' => 0,
+						'bottom' => 0,
+						'left' => 0,
+						'unit' => 'px',
+						'isLinked' => true
+					),
+					'tablet' => array(
+						'top' => 0,
+						'right' => 0,
+						'bottom' => 0,
+						'left' => 0,
+						'unit' => 'px',
+						'isLinked' => true
+					),
+					'mobile' => array(
+						'top' => 0,
+						'right' => 0,
+						'bottom' => 0,
+						'left' => 0,
+						'unit' => 'px',
+						'isLinked' => true
+					)
+				)
 			),
 			'headingFontFamily' => array(
 				'type' => 'string',
@@ -80,30 +146,124 @@ return array(
 					'desktop' => array(
 						'top' => '0',
 						'right' => '0',
-						'bottom' => '0',
+						'bottom' => '10',
 						'left' => '0',
 						'unit' => 'px',
-						'isLinked' => true
+						'isLinked' => false
 					),
 					'tablet' => array(
 						'top' => '0',
 						'right' => '0',
-						'bottom' => '0',
+						'bottom' => '10',
 						'left' => '0',
 						'unit' => 'px',
-						'isLinked' => true
+						'isLinked' => false
 					),
 					'mobile' => array(
 						'top' => '0',
 						'right' => '0',
-						'bottom' => '0',
+						'bottom' => '10',
 						'left' => '0',
 						'unit' => 'px',
-						'isLinked' => true
+						'isLinked' => false
 					)
 				)
 			),
 			'headingMargin' => array(
+				'type' => 'object',
+				'default' => array(
+					'desktop' => array(
+						'top' => 0,
+						'right' => 0,
+						'bottom' => 0,
+						'left' => 0,
+						'unit' => 'px',
+						'isLinked' => false
+					),
+					'tablet' => array(
+						'top' => 0,
+						'right' => 0,
+						'bottom' => 0,
+						'left' => 0,
+						'unit' => 'px',
+						'isLinked' => false
+					),
+					'mobile' => array(
+						'top' => 0,
+						'right' => 0,
+						'bottom' => 0,
+						'left' => 0,
+						'unit' => 'px',
+						'isLinked' => false
+					)
+				)
+			),
+			'descriptionFontFamily' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'descriptionFontSizeDesktop' => array(
+				'type' => 'number',
+				'default' => 18
+			),
+			'descriptionFontSizeTablet' => array(
+				'type' => 'number',
+				'default' => 18
+			),
+			'descriptionFontSizeMobile' => array(
+				'type' => 'number',
+				'default' => 16
+			),
+			'descriptionFontWeight' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'descriptionTextTransform' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'descriptionLineHeightDesktop' => array(
+				'type' => 'number',
+				'default' => 1.1
+			),
+			'descriptionLineHeightTablet' => array(
+				'type' => 'number',
+				'default' => 1.2
+			),
+			'descriptionLineHeightMobile' => array(
+				'type' => 'number',
+				'default' => 1.3
+			),
+			'descriptionPadding' => array(
+				'type' => 'object',
+				'default' => array(
+					'desktop' => array(
+						'top' => '0',
+						'right' => '0',
+						'bottom' => '30',
+						'left' => '0',
+						'unit' => 'px',
+						'isLinked' => false
+					),
+					'tablet' => array(
+						'top' => '0',
+						'right' => '0',
+						'bottom' => '30',
+						'left' => '0',
+						'unit' => 'px',
+						'isLinked' => false
+					),
+					'mobile' => array(
+						'top' => '0',
+						'right' => '0',
+						'bottom' => '30',
+						'left' => '0',
+						'unit' => 'px',
+						'isLinked' => false
+					)
+				)
+			),
+			'descriptionMargin' => array(
 				'type' => 'object',
 				'default' => array(
 					'desktop' => array(
@@ -131,6 +291,128 @@ return array(
 						'isLinked' => true
 					)
 				)
+			),
+			'buttonFontFamily' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'buttonFontSizeDesktop' => array(
+				'type' => 'number',
+				'default' => 16
+			),
+			'buttonFontSizeTablet' => array(
+				'type' => 'number',
+				'default' => 16
+			),
+			'buttonFontSizeMobile' => array(
+				'type' => 'number',
+				'default' => 16
+			),
+			'buttonFontWeight' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'buttonTextTransform' => array(
+				'type' => 'string',
+				'default' => 'none'
+			),
+			'buttonLineHeightDesktop' => array(
+				'type' => 'number',
+				'default' => 1.1
+			),
+			'buttonLineHeightTablet' => array(
+				'type' => 'number',
+				'default' => 1.2
+			),
+			'buttonLineHeightMobile' => array(
+				'type' => 'number',
+				'default' => 1.3
+			),
+			'buttonPadding' => array(
+				'type' => 'object',
+				'default' => array(
+					'desktop' => array(
+						'top' => '12',
+						'right' => '21',
+						'bottom' => '12',
+						'left' => '21',
+						'unit' => 'px',
+						'isLinked' => false
+					),
+					'tablet' => array(
+						'top' => '12',
+						'right' => '21',
+						'bottom' => '12',
+						'left' => '21',
+						'unit' => 'px',
+						'isLinked' => false
+					),
+					'mobile' => array(
+						'top' => '12',
+						'right' => '21',
+						'bottom' => '12',
+						'left' => '21',
+						'unit' => 'px',
+						'isLinked' => false
+					)
+				)
+			),
+			'buttonMargin' => array(
+				'type' => 'object',
+				'default' => array(
+					'desktop' => array(
+						'top' => 0,
+						'right' => 0,
+						'bottom' => 0,
+						'left' => 0,
+						'unit' => 'px',
+						'isLinked' => false
+					),
+					'tablet' => array(
+						'top' => 0,
+						'right' => 0,
+						'bottom' => 0,
+						'left' => 0,
+						'unit' => 'px',
+						'isLinked' => false
+					),
+					'mobile' => array(
+						'top' => 0,
+						'right' => 0,
+						'bottom' => 0,
+						'left' => 0,
+						'unit' => 'px',
+						'isLinked' => false
+					)
+				)
+			),
+			'buttonTextColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'buttonBgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bgType' => array(
+				'type' => 'string',
+				'default' => 'gradient'
+			),
+			'bgColor' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bgGradient1' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bgGradient2' => array(
+				'type' => 'string',
+				'default' => ''
+			),
+			'bgGradientAngle' => array(
+				'type' => 'number',
+				'default' => 90
 			)
 		),
 		'supports' => array(
@@ -139,11 +421,6 @@ return array(
 				'left',
 				'right',
 				'full'
-			),
-			'color' => array(
-				'background' => true,
-				'gradients' => true,
-				'text' => false
 			)
 		),
 		'textdomain' => 'call-to-action-block',

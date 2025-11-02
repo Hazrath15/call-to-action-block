@@ -4,23 +4,14 @@ import { PanelBody, SelectControl, TextControl } from '@wordpress/components';
 import { TypographyControl } from './Style/TypographyControl';
 import ColorControl from './Style/ColorControl';
 import DimensionControl from './Style/DimensionControl';
+import BackgroundColor from './Style/BackgroundColor';
 function Settings({ attributes, setAttributes }) {
-    const { headingTag, alignment, headingColor, buttonText, buttonUrl, headingPadding, headingMargin } = attributes;
+    const { headingTag, alignment, headingColor, buttonText, buttonUrl, headingPadding, headingMargin, sectionPadding, sectionMargin } = attributes;
     {/* Inspector Settings */ }
     return (
         <>
             <InspectorControls>
                 <PanelBody title={__('General', 'call-to-action-block')} initialOpen={true}>
-                    <SelectControl
-                        label={__('Alignment', 'call-to-action-block')}
-                        value={alignment}
-                        options={[
-                            { label: 'Left', value: 'left' },
-                            { label: 'Center', value: 'center' },
-                            { label: 'Right', value: 'right' },
-                        ]}
-                        onChange={(value) => setAttributes({ alignment: value })}
-                    />
                     <SelectControl
                         label={__('Heading HTML Tag', 'call-to-action-block')}
                         value={headingTag}
@@ -34,13 +25,25 @@ function Settings({ attributes, setAttributes }) {
                         ]}
                         onChange={(value) => setAttributes({ headingTag: value })}
                     />
-                    <TypographyControl attributes={attributes} setAttributes={setAttributes} prefix="heading" />
-                    <ColorControl
-                        label={__('Color', 'call-to-action-block')}
-                        value={headingColor}
-                        onChange={(color) => setAttributes({ headingColor: color })}
-                        defaultColor=""
-                        className="color-picker-control"
+                    <TextControl
+                        label={__('Heading Text', 'call-to-action-block')}
+                        value={attributes.heading}
+                        onChange={(value) => setAttributes({ heading: value })}
+                    />
+                    <TextControl
+                        label={__('Description Text', 'call-to-action-block')}
+                        value={attributes.description}
+                        onChange={(value) => setAttributes({ description: value })}
+                    />
+                    <SelectControl
+                        label={__('Alignment', 'call-to-action-block')}
+                        value={alignment}
+                        options={[
+                            { label: 'Left', value: 'start' },
+                            { label: 'Center', value: 'center' },
+                            { label: 'Right', value: 'end' },
+                        ]}
+                        onChange={(value) => setAttributes({ alignment: value })}
                     />
                 </PanelBody>
                 <PanelBody title={__('Button', 'call-to-action-block')} initialOpen={false}>
@@ -57,8 +60,28 @@ function Settings({ attributes, setAttributes }) {
                 </PanelBody>
             </InspectorControls>
             <InspectorControls group="styles">
-                <PanelBody title={__('Button', 'call-to-action-block')} initialOpen={false}>
-                    <TypographyControl attributes={attributes} setAttributes={setAttributes} prefix="button" />
+                <PanelBody title={__('Section Layout', 'call-to-action-block')} initialOpen={true}>
+                    <BackgroundColor attributes={attributes} setAttributes={setAttributes} />
+                    <DimensionControl
+                        label="Padding"
+                        value={sectionPadding}
+                        onChange={(newVal) => setAttributes({ sectionPadding: newVal })}
+                    />
+                    <DimensionControl
+                        label="Margin"
+                        value={sectionMargin}
+                        onChange={(newVal) => setAttributes({ sectionMargin: newVal })}
+                    />
+                </PanelBody>
+                <PanelBody title={__('Heading Styles', 'call-to-action-block')} initialOpen={false}>
+                    <TypographyControl attributes={attributes} setAttributes={setAttributes} prefix="heading" />
+                    <ColorControl
+                        label={__('Color', 'call-to-action-block')}
+                        value={headingColor}
+                        onChange={(color) => setAttributes({ headingColor: color })}
+                        defaultColor=""
+                        className="color-picker-control"
+                    />
                     <DimensionControl
                         label="Padding"
                         value={headingPadding}
@@ -68,6 +91,53 @@ function Settings({ attributes, setAttributes }) {
                         label="Margin"
                         value={headingMargin}
                         onChange={(newVal) => setAttributes({ headingMargin: newVal })}
+                    />
+                </PanelBody>
+                <PanelBody title={__('Description Styles', 'call-to-action-block')} initialOpen={false}>
+                    <TypographyControl attributes={attributes} setAttributes={setAttributes} prefix="description" />
+                    <ColorControl
+                        label={__('Color', 'call-to-action-block')}
+                        value={attributes.descriptionColor}
+                        onChange={(color) => setAttributes({ descriptionColor: color })}
+                        defaultColor=""
+                        className="color-picker-control"
+                    />
+                    <DimensionControl
+                        label="Padding"
+                        value={attributes.descriptionPadding}
+                        onChange={(newVal) => setAttributes({ descriptionPadding: newVal })}
+                    />
+                    <DimensionControl
+                        label="Margin"
+                        value={attributes.descriptionMargin}
+                        onChange={(newVal) => setAttributes({ descriptionMargin: newVal })}
+                    />
+                </PanelBody>
+                <PanelBody title={__('Button Styles', 'call-to-action-block')} initialOpen={false}>
+                    <TypographyControl attributes={attributes} setAttributes={setAttributes} prefix="button" />
+                    <ColorControl
+                        label={__('Text Color', 'call-to-action-block')}
+                        value={attributes.buttonTextColor}
+                        onChange={(color) => setAttributes({ buttonTextColor: color })}
+                        defaultColor=""
+                        className="color-picker-control"
+                    />
+                    <ColorControl
+                        label={__('Background Color', 'call-to-action-block')}
+                        value={attributes.buttonBgColor}
+                        onChange={(color) => setAttributes({ buttonBgColor: color })}
+                        defaultColor=""
+                        className="color-picker-control"
+                    />
+                    <DimensionControl
+                        label="Padding"
+                        value={attributes.buttonPadding}
+                        onChange={(newVal) => setAttributes({ buttonPadding: newVal })}
+                    />
+                    <DimensionControl
+                        label="Margin"
+                        value={attributes.buttonMargin}
+                        onChange={(newVal) => setAttributes({ buttonMargin: newVal })}
                     />
                 </PanelBody>
             </InspectorControls>

@@ -2,6 +2,7 @@ import { __ } from '@wordpress/i18n';
 import { Button, Modal, SelectControl, RangeControl, PanelRow, Flex, FlexItem } from '@wordpress/components';
 import { useState } from '@wordpress/element';
 import DeviceSwitcher from '../../DeviceSwitcher';
+import { button } from '@wordpress/icons';
 
 export const TypographyControl = ({ attributes, setAttributes, prefix }) => {
 	const [isOpen, setOpen] = useState(false);
@@ -44,13 +45,24 @@ export const TypographyControl = ({ attributes, setAttributes, prefix }) => {
 				LineHeightTablet: 1.2,
 				LineHeightMobile: 1.3
 			},
-			subHeading: {
+			description: {
 				FontFamily: '',
-				FontWeight: '400',
+				FontWeight: ' ',
+				TextTransform: 'none',
+				FontSizeDesktop: 18,
+				FontSizeTablet: 18,
+				FontSizeMobile: 16,
+				LineHeightDesktop: 1.5,
+				LineHeightTablet: 1.6,
+				LineHeightMobile: 1.7
+			},
+			button: {
+				FontFamily: '',
+				FontWeight: ' ',
 				TextTransform: 'none',
 				FontSizeDesktop: 16,
-				FontSizeTablet: 14,
-				FontSizeMobile: 12,
+				FontSizeTablet: 16,
+				FontSizeMobile: 16,
 				LineHeightDesktop: 1.5,
 				LineHeightTablet: 1.6,
 				LineHeightMobile: 1.7
