@@ -1,5 +1,5 @@
 import { __ } from '@wordpress/i18n';
-import { ColorPalette, SelectControl, GradientPicker, RangeControl } from '@wordpress/components';
+import { SelectControl, RangeControl } from '@wordpress/components';
 import ColorControl from './ColorControl';
 
 const BackgroundColor = ({ attributes, setAttributes }) => {
