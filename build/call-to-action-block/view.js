@@ -1,1 +1,614 @@
-(()=>{"use strict";var t,n={238:(t,n,e)=>{var o=e(338);const i=window.wp.blockEditor,a=(window.wp.i18n,window.ReactJSXRuntime),l=({attributes:t})=>{const{headingColor:n,headingFontFamily:e,headingFontWeight:o,headingTextTransform:i,headingFontSizeDesktop:l,headingFontSizeTablet:r,headingFontSizeMobile:c,headingLineHeightDesktop:d,headingLineHeightTablet:b,headingLineHeightMobile:s,headingPadding:g,headingMargin:p,descriptionColor:h,descriptionFontFamily:k,descriptionFontWeight:m,descriptionTextTransform:$,descriptionFontSizeDesktop:u,descriptionFontSizeTablet:x,descriptionFontSizeMobile:f,descriptionLineHeightDesktop:w,descriptionLineHeightTablet:T,descriptionLineHeightMobile:v,descriptionPadding:j,descriptionMargin:F,buttonFontFamily:O,buttonFontWeight:y,buttonTextTransform:z,buttonFontSizeDesktop:L,buttonFontSizeTablet:S,buttonFontSizeMobile:M,buttonLineHeightDesktop:C,buttonLineHeightTablet:H,buttonLineHeightMobile:N,buttonPadding:A,buttonMargin:D,buttonTextColor:E,buttonBgColor:R,bgType:B,bgColor:P,bgGradient1:_,bgGradient2:I,bgGradientAngle:G,sectionPadding:W,sectionMargin:J}=t,q=t=>{const n=t?.desktop||{},e=t?.tablet||{},o=t?.mobile||{},i=n.unit||"px",a=e.unit||i,l=o.unit||a,r=(t,n)=>((t,n="px")=>{if(null==t||""===t)return`0${n}`;const e=String(t).trim();return/\d\s*(px|%|em|rem|vh|vw)$/.test(e)?e:`${e}${n}`})(t,n),c=r(n.top,i),d=n.isLinked?Array(4).fill(c).join(" "):[r(n.top,i),r(n.right,i),r(n.bottom,i),r(n.left,i)].join(" "),b=r(e.top,a),s=e.isLinked?Array(4).fill(b).join(" "):[r(e.top,a),r(e.right,a),r(e.bottom,a),r(e.left,a)].join(" "),g=r(o.top,l);return{desktop:d,tablet:s,mobile:o.isLinked?Array(4).fill(g).join(" "):[r(o.top,l),r(o.right,l),r(o.bottom,l),r(o.left,l)].join(" ")}},U=q(g),X=q(p),K=q(j),Q=q(F),V=q(A),Y=q(D),Z=q(W),tt=q(J),nt=(()=>{if("gradient"===B&&_){const t=[`${_} 0%`];t.push(I?`${I} 100%`:`${_}00 100%`);const n=null!=G?G:90;return`linear-gradient(${{0:"to right",90:"to bottom",180:"to left",270:"to top"}[n]||`${n}deg`}, ${t.join(", ")})`}return P})(),et=(t,n,e,o,i,a)=>`\n\t\t${n?`font-family: ${n};`:""}\n\t\t${e?`font-weight: ${e};`:""}\n\t\t${o?`text-transform: ${o};`:""}\n\t\tfont-size: ${i||("heading"===t?40:"description"===t?16:14)}px;\n\t\tline-height: ${a||1.4};\n\t`;return(0,a.jsx)("style",{children:`\n\t\t\t\t/* -------------------------------------------------\n\t\t\t\t   SECTION (container)\n\t\t\t\t   ------------------------------------------------- */\n\t\t\t\t.wp-block-create-block-call-to-action-block {\n\t\t\t\t\tbackground: ${nt};\n\t\t\t\t\tpadding: ${Z.desktop};\n\t\t\t\t\tmargin: ${tt.desktop};\n                    align-items: ${t?.alignment||"center"};\n\t\t\t\t}\n\n                .callToActionBlock {\n                    text-align: ${t?.alignment||"center"};\n                }\n\n\t\t\t\t/* -------------------------------------------------\n\t\t\t\t   HEADING\n\t\t\t\t   ------------------------------------------------- */\n\t\t\t\t.wp-block-create-block-call-to-action-block .hero-content .main-heading {\n\t\t\t\t\tcolor: ${n||"inherit"};\n\t\t\t\t\t${et("heading",e,o,i,l,d)}\n\t\t\t\t\tpadding: ${U.desktop};\n\t\t\t\t\tmargin: ${X.desktop};\n\t\t\t\t}\n\n\t\t\t\t/* -------------------------------------------------\n\t\t\t\t   DESCRIPTION\n\t\t\t\t   ------------------------------------------------- */\n\t\t\t\t.wp-block-create-block-call-to-action-block .hero-content .description {\n\t\t\t\t\tcolor: ${h||"inherit"};\n\t\t\t\t\t${et("description",k,m,$,u,w)}\n\t\t\t\t\tpadding: ${K.desktop};\n\t\t\t\t\tmargin: ${Q.desktop};\n\t\t\t\t}\n\n\t\t\t\t/* -------------------------------------------------\n\t\t\t\t   BUTTON\n\t\t\t\t   ------------------------------------------------- */\n\t\t\t\t.wp-block-create-block-call-to-action-block .hero-content .cta-button {\n\t\t\t\t\t${et("button",O,y,z,L,C)}\n\t\t\t\t\tpadding: ${V.desktop};\n\t\t\t\t\tmargin: ${Y.desktop};\n\t\t\t\t\tdisplay: inline-block;\n                    color: ${E||"inherit"};\n                    background-color: ${R};\n\t\t\t\t}\n\n\t\t\t\t/* -------------------------------------------------\n\t\t\t\t   TABLET (≤1024px)\n\t\t\t\t   ------------------------------------------------- */\n\t\t\t\t@media (max-width: 1024px) {\n\t\t\t\t\t.wp-block-create-block-call-to-action-block {\n\t\t\t\t\t\tpadding: ${Z.tablet};\n\t\t\t\t\t\tmargin: ${tt.tablet};\n\t\t\t\t\t}\n\t\t\t\t\t.wp-block-create-block-call-to-action-block .hero-content .main-heading {\n\t\t\t\t\t\tfont-size: ${r||32}px;\n\t\t\t\t\t\tline-height: ${b||1.3};\n\t\t\t\t\t\tpadding: ${U.tablet};\n\t\t\t\t\t\tmargin: ${X.tablet};\n\t\t\t\t\t}\n\t\t\t\t\t.wp-block-create-block-call-to-action-block .hero-content .description {\n\t\t\t\t\t\tfont-size: ${x||15}px;\n\t\t\t\t\t\tline-height: ${T||1.5};\n\t\t\t\t\t\tpadding: ${K.tablet};\n\t\t\t\t\t\tmargin: ${Q.tablet};\n\t\t\t\t\t}\n\t\t\t\t\t.wp-block-create-block-call-to-action-block .hero-content .cta-button {\n\t\t\t\t\t\tfont-size: ${S||14}px;\n\t\t\t\t\t\tline-height: ${H||1.4};\n\t\t\t\t\t\tpadding: ${V.tablet};\n\t\t\t\t\t\tmargin: ${Y.tablet};\n\t\t\t\t\t}\n\t\t\t\t}\n\n\t\t\t\t/* -------------------------------------------------\n\t\t\t\t   MOBILE (≤767px)\n\t\t\t\t   ------------------------------------------------- */\n\t\t\t\t@media (max-width: 767px) {\n\t\t\t\t\t.wp-block-create-block-call-to-action-block {\n\t\t\t\t\t\tpadding: ${Z.mobile};\n\t\t\t\t\t\tmargin: ${tt.mobile};\n\t\t\t\t\t}\n\t\t\t\t\t.wp-block-create-block-call-to-action-block .hero-content .main-heading {\n\t\t\t\t\t\tfont-size: ${c||24}px;\n\t\t\t\t\t\tline-height: ${s||1.4};\n\t\t\t\t\t\tpadding: ${U.mobile};\n\t\t\t\t\t\tmargin: ${X.mobile};\n\t\t\t\t\t}\n\t\t\t\t\t.wp-block-create-block-call-to-action-block .hero-content .description {\n\t\t\t\t\t\tfont-size: ${f||14}px;\n\t\t\t\t\t\tline-height: ${v||1.6};\n\t\t\t\t\t\tpadding: ${K.mobile};\n\t\t\t\t\t\tmargin: ${Q.mobile};\n\t\t\t\t\t}\n\t\t\t\t\t.wp-block-create-block-call-to-action-block .hero-content .cta-button {\n\t\t\t\t\t\tfont-size: ${M||13}px;\n\t\t\t\t\t\tline-height: ${N||1.5};\n\t\t\t\t\t\tpadding: ${V.mobile};\n\t\t\t\t\t\tmargin: ${Y.mobile};\n\t\t\t\t\t}\n\t\t\t\t}\n\t\t\t`})},r=({attributes:t})=>{const{headingTag:n,heading:e,description:o,buttonText:r}=t;return(0,a.jsxs)(a.Fragment,{children:[(0,a.jsx)(l,{attributes:t}),(0,a.jsx)("div",{className:"callToActionBlock",children:(0,a.jsxs)("div",{className:"hero-content",children:[(0,a.jsx)(i.RichText.Content,{tagName:n,value:e,className:"main-heading"}),(0,a.jsx)(i.RichText.Content,{tagName:"p",value:o,className:"description"}),(0,a.jsx)("button",{className:"cta-button",children:r})]})})]})};document.addEventListener("DOMContentLoaded",()=>{document.querySelectorAll(".wp-block-create-block-call-to-action-block").forEach(t=>{const n=JSON.parse(t.dataset.attributes);console.log({attributes:n}),(0,o.H)(t).render((0,a.jsx)(a.Fragment,{children:(0,a.jsx)(r,{attributes:n})})),t?.removeAttribute("data-attributes")})})},338:(t,n,e)=>{var o=e(795);n.H=o.createRoot,o.hydrateRoot},795:t=>{t.exports=window.ReactDOM}},e={};function o(t){var i=e[t];if(void 0!==i)return i.exports;var a=e[t]={exports:{}};return n[t](a,a.exports,o),a.exports}o.m=n,t=[],o.O=(n,e,i,a)=>{if(!e){var l=1/0;for(b=0;b<t.length;b++){for(var[e,i,a]=t[b],r=!0,c=0;c<e.length;c++)(!1&a||l>=a)&&Object.keys(o.O).every(t=>o.O[t](e[c]))?e.splice(c--,1):(r=!1,a<l&&(l=a));if(r){t.splice(b--,1);var d=i();void 0!==d&&(n=d)}}return n}a=a||0;for(var b=t.length;b>0&&t[b-1][2]>a;b--)t[b]=t[b-1];t[b]=[e,i,a]},o.o=(t,n)=>Object.prototype.hasOwnProperty.call(t,n),(()=>{var t={742:0,550:0};o.O.j=n=>0===t[n];var n=(n,e)=>{var i,a,[l,r,c]=e,d=0;if(l.some(n=>0!==t[n])){for(i in r)o.o(r,i)&&(o.m[i]=r[i]);if(c)var b=c(o)}for(n&&n(e);d<l.length;d++)a=l[d],o.o(t,a)&&t[a]&&t[a][0](),t[a]=0;return o.O(b)},e=globalThis.webpackChunkcall_to_action_block=globalThis.webpackChunkcall_to_action_block||[];e.forEach(n.bind(null,0)),e.push=n.bind(null,e.push.bind(e))})();var i=o.O(void 0,[550],()=>o(238));i=o.O(i)})();
+/******/ (() => { // webpackBootstrap
+/******/ 	"use strict";
+/******/ 	var __webpack_modules__ = ({
+
+/***/ "./node_modules/react-dom/client.js":
+/*!******************************************!*\
+  !*** ./node_modules/react-dom/client.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, exports, __webpack_require__) => {
+
+
+
+var m = __webpack_require__(/*! react-dom */ "react-dom");
+if (false) // removed by dead control flow
+{} else {
+  var i = m.__SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED;
+  exports.createRoot = function(c, o) {
+    i.usingClientEntryPoint = true;
+    try {
+      return m.createRoot(c, o);
+    } finally {
+      i.usingClientEntryPoint = false;
+    }
+  };
+  exports.hydrateRoot = function(c, h, o) {
+    i.usingClientEntryPoint = true;
+    try {
+      return m.hydrateRoot(c, h, o);
+    } finally {
+      i.usingClientEntryPoint = false;
+    }
+  };
+}
+
+
+/***/ }),
+
+/***/ "./src/call-to-action-block/Components/Frontend/BlockMain.js":
+/*!*******************************************************************!*\
+  !*** ./src/call-to-action-block/Components/Frontend/BlockMain.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/block-editor */ "@wordpress/block-editor");
+/* harmony import */ var _wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _Style__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../Style */ "./src/call-to-action-block/Style.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__);
+
+
+
+const BlockName = ({
+  attributes
+}) => {
+  const {
+    headingTag,
+    heading,
+    description,
+    buttonText
+  } = attributes;
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.Fragment, {
+    children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_Style__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      attributes: attributes
+    }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("div", {
+      className: `callToActionBlock`,
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsxs)("div", {
+        className: "hero-content",
+        children: [/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
+          tagName: headingTag,
+          value: heading,
+          className: "main-heading"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)(_wordpress_block_editor__WEBPACK_IMPORTED_MODULE_0__.RichText.Content, {
+          tagName: "p",
+          value: description,
+          className: "description"
+        }), /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_2__.jsx)("button", {
+          className: "cta-button",
+          children: buttonText
+        })]
+      })
+    })]
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (BlockName);
+
+/***/ }),
+
+/***/ "./src/call-to-action-block/Style.js":
+/*!*******************************************!*\
+  !*** ./src/call-to-action-block/Style.js ***!
+  \*******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @wordpress/i18n */ "@wordpress/i18n");
+/* harmony import */ var _wordpress_i18n__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_wordpress_i18n__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__);
+/**
+ * Style.jsx
+ * -------------------------------------------------
+ * Generates <style> tag with:
+ *   • Heading, Description, Button: typography, colour, padding, margin (responsive)
+ *   • Section background (solid colour OR gradient)
+ *   • Section padding & margin (responsive)
+ */
+
+
+const Style = ({
+  attributes
+}) => {
+  const {
+    headingColor,
+    headingFontFamily,
+    headingFontWeight,
+    headingTextTransform,
+    headingFontSizeDesktop,
+    headingFontSizeTablet,
+    headingFontSizeMobile,
+    headingLineHeightDesktop,
+    headingLineHeightTablet,
+    headingLineHeightMobile,
+    headingPadding,
+    headingMargin,
+    descriptionColor,
+    descriptionFontFamily,
+    descriptionFontWeight,
+    descriptionTextTransform,
+    descriptionFontSizeDesktop,
+    descriptionFontSizeTablet,
+    descriptionFontSizeMobile,
+    descriptionLineHeightDesktop,
+    descriptionLineHeightTablet,
+    descriptionLineHeightMobile,
+    descriptionPadding,
+    descriptionMargin,
+    buttonFontFamily,
+    buttonFontWeight,
+    buttonTextTransform,
+    buttonFontSizeDesktop,
+    buttonFontSizeTablet,
+    buttonFontSizeMobile,
+    buttonLineHeightDesktop,
+    buttonLineHeightTablet,
+    buttonLineHeightMobile,
+    buttonPadding,
+    buttonMargin,
+    buttonTextColor,
+    buttonBgColor,
+    bgType,
+    bgColor,
+    bgGradient1,
+    bgGradient2,
+    bgGradientAngle,
+    sectionPadding,
+    sectionMargin
+  } = attributes;
+
+  /* ------------------------------------------------------------------
+     HELPER: value + unit → CSS string (e.g. 20 → "20px")
+     ------------------------------------------------------------------ */
+  const formatSide = (val, unit = 'px') => {
+    if (val === undefined || val === null || val === '') return `0${unit}`;
+    const v = String(val).trim();
+    return /\d\s*(px|%|em|rem|vh|vw)$/.test(v) ? v : `${v}${unit}`;
+  };
+
+  /* ------------------------------------------------------------------
+     HELPER: responsive padding / margin strings (supports isLinked)
+     ------------------------------------------------------------------ */
+  const getResponsive = obj => {
+    const desktop = obj?.desktop || {};
+    const tablet = obj?.tablet || {};
+    const mobile = obj?.mobile || {};
+    const unitD = desktop.unit || 'px';
+    const unitT = tablet.unit || unitD;
+    const unitM = mobile.unit || unitT;
+    const fmt = (side, u) => formatSide(side, u);
+
+    // ---- Desktop -------------------------------------------------
+    const dTop = fmt(desktop.top, unitD);
+    const d = desktop.isLinked ? Array(4).fill(dTop).join(' ') : [fmt(desktop.top, unitD), fmt(desktop.right, unitD), fmt(desktop.bottom, unitD), fmt(desktop.left, unitD)].join(' ');
+
+    // ---- Tablet --------------------------------------------------
+    const tTop = fmt(tablet.top, unitT);
+    const t = tablet.isLinked ? Array(4).fill(tTop).join(' ') : [fmt(tablet.top, unitT), fmt(tablet.right, unitT), fmt(tablet.bottom, unitT), fmt(tablet.left, unitT)].join(' ');
+
+    // ---- Mobile --------------------------------------------------
+    const mTop = fmt(mobile.top, unitM);
+    const m = mobile.isLinked ? Array(4).fill(mTop).join(' ') : [fmt(mobile.top, unitM), fmt(mobile.right, unitM), fmt(mobile.bottom, unitM), fmt(mobile.left, unitM)].join(' ');
+    return {
+      desktop: d,
+      tablet: t,
+      mobile: m
+    };
+  };
+
+  /* ------------------------------------------------------------------
+     Padding / Margin for every element
+     ------------------------------------------------------------------ */
+  const headingPad = getResponsive(headingPadding);
+  const headingMar = getResponsive(headingMargin);
+  const descPad = getResponsive(descriptionPadding);
+  const descMar = getResponsive(descriptionMargin);
+  const buttonPad = getResponsive(buttonPadding);
+  const buttonMar = getResponsive(buttonMargin);
+  const sectionPad = getResponsive(sectionPadding);
+  const sectionMar = getResponsive(sectionMargin);
+
+  /* ------------------------------------------------------------------
+     BACKGROUND: solid colour or 2-colour gradient
+     ------------------------------------------------------------------ */
+  const backgroundCSS = (() => {
+    if (bgType === 'gradient' && bgGradient1) {
+      const stops = [`${bgGradient1} 0%`];
+      stops.push(bgGradient2 ? `${bgGradient2} 100%` : `${bgGradient1}00 100%`);
+      const angle = bgGradientAngle !== null && bgGradientAngle !== void 0 ? bgGradientAngle : 90;
+      const map = {
+        0: 'to right',
+        90: 'to bottom',
+        180: 'to left',
+        270: 'to top'
+      };
+      const direction = map[angle] || `${angle}deg`;
+      return `linear-gradient(${direction}, ${stops.join(', ')})`;
+    }
+    return bgColor;
+  })();
+
+  /* ------------------------------------------------------------------
+     TYPOGRAPHY helper
+     ------------------------------------------------------------------ */
+  const typo = (prefix, family, weight, transform, size, lh) => `
+		${family ? `font-family: ${family};` : ''}
+		${weight ? `font-weight: ${weight};` : ''}
+		${transform ? `text-transform: ${transform};` : ''}
+		font-size: ${size || (prefix === 'heading' ? 40 : prefix === 'description' ? 16 : 14)}px;
+		line-height: ${lh || 1.4};
+	`;
+
+  /* ------------------------------------------------------------------
+     RENDER <style>
+     ------------------------------------------------------------------ */
+  return /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_1__.jsx)("style", {
+    children: `
+				/* -------------------------------------------------
+				   SECTION (container)
+				   ------------------------------------------------- */
+				.wp-block-create-block-call-to-action-block {
+					background: ${backgroundCSS};
+					padding: ${sectionPad.desktop};
+					margin: ${sectionMar.desktop};
+                    align-items: ${attributes?.alignment || 'center'};
+				}
+
+                .callToActionBlock {
+                    text-align: ${attributes?.alignment || 'center'};
+                }
+
+				/* -------------------------------------------------
+				   HEADING
+				   ------------------------------------------------- */
+				.wp-block-create-block-call-to-action-block .hero-content .main-heading {
+					color: ${headingColor || 'inherit'};
+					${typo('heading', headingFontFamily, headingFontWeight, headingTextTransform, headingFontSizeDesktop, headingLineHeightDesktop)}
+					padding: ${headingPad.desktop};
+					margin: ${headingMar.desktop};
+				}
+
+				/* -------------------------------------------------
+				   DESCRIPTION
+				   ------------------------------------------------- */
+				.wp-block-create-block-call-to-action-block .hero-content .description {
+					color: ${descriptionColor || 'inherit'};
+					${typo('description', descriptionFontFamily, descriptionFontWeight, descriptionTextTransform, descriptionFontSizeDesktop, descriptionLineHeightDesktop)}
+					padding: ${descPad.desktop};
+					margin: ${descMar.desktop};
+				}
+
+				/* -------------------------------------------------
+				   BUTTON
+				   ------------------------------------------------- */
+				.wp-block-create-block-call-to-action-block .hero-content .cta-button {
+					${typo('button', buttonFontFamily, buttonFontWeight, buttonTextTransform, buttonFontSizeDesktop, buttonLineHeightDesktop)}
+					padding: ${buttonPad.desktop};
+					margin: ${buttonMar.desktop};
+					display: inline-block;
+                    color: ${buttonTextColor || 'inherit'};
+                    background-color: ${buttonBgColor};
+				}
+
+				/* -------------------------------------------------
+				   TABLET (≤1024px)
+				   ------------------------------------------------- */
+				@media (max-width: 1024px) {
+					.wp-block-create-block-call-to-action-block {
+						padding: ${sectionPad.tablet};
+						margin: ${sectionMar.tablet};
+					}
+					.wp-block-create-block-call-to-action-block .hero-content .main-heading {
+						font-size: ${headingFontSizeTablet || 32}px;
+						line-height: ${headingLineHeightTablet || 1.3};
+						padding: ${headingPad.tablet};
+						margin: ${headingMar.tablet};
+					}
+					.wp-block-create-block-call-to-action-block .hero-content .description {
+						font-size: ${descriptionFontSizeTablet || 15}px;
+						line-height: ${descriptionLineHeightTablet || 1.5};
+						padding: ${descPad.tablet};
+						margin: ${descMar.tablet};
+					}
+					.wp-block-create-block-call-to-action-block .hero-content .cta-button {
+						font-size: ${buttonFontSizeTablet || 14}px;
+						line-height: ${buttonLineHeightTablet || 1.4};
+						padding: ${buttonPad.tablet};
+						margin: ${buttonMar.tablet};
+					}
+				}
+
+				/* -------------------------------------------------
+				   MOBILE (≤767px)
+				   ------------------------------------------------- */
+				@media (max-width: 767px) {
+					.wp-block-create-block-call-to-action-block {
+						padding: ${sectionPad.mobile};
+						margin: ${sectionMar.mobile};
+					}
+					.wp-block-create-block-call-to-action-block .hero-content .main-heading {
+						font-size: ${headingFontSizeMobile || 24}px;
+						line-height: ${headingLineHeightMobile || 1.4};
+						padding: ${headingPad.mobile};
+						margin: ${headingMar.mobile};
+					}
+					.wp-block-create-block-call-to-action-block .hero-content .description {
+						font-size: ${descriptionFontSizeMobile || 14}px;
+						line-height: ${descriptionLineHeightMobile || 1.6};
+						padding: ${descPad.mobile};
+						margin: ${descMar.mobile};
+					}
+					.wp-block-create-block-call-to-action-block .hero-content .cta-button {
+						font-size: ${buttonFontSizeMobile || 13}px;
+						line-height: ${buttonLineHeightMobile || 1.5};
+						padding: ${buttonPad.mobile};
+						margin: ${buttonMar.mobile};
+					}
+				}
+			`
+  });
+};
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (Style);
+
+/***/ }),
+
+/***/ "./src/call-to-action-block/style.scss":
+/*!*********************************************!*\
+  !*** ./src/call-to-action-block/style.scss ***!
+  \*********************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+// extracted by mini-css-extract-plugin
+
+
+/***/ }),
+
+/***/ "./src/call-to-action-block/view.js":
+/*!******************************************!*\
+  !*** ./src/call-to-action-block/view.js ***!
+  \******************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react_dom_client__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react-dom/client */ "./node_modules/react-dom/client.js");
+/* harmony import */ var _style_scss__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.scss */ "./src/call-to-action-block/style.scss");
+/* harmony import */ var _Components_Frontend_BlockMain__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Components/Frontend/BlockMain */ "./src/call-to-action-block/Components/Frontend/BlockMain.js");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react/jsx-runtime */ "react/jsx-runtime");
+/* harmony import */ var react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__);
+// @ts-ignore
+
+
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const blockNameEls = document.querySelectorAll('.wp-block-create-block-call-to-action-block');
+  blockNameEls.forEach(blockNameEl => {
+    const attributes = JSON.parse(blockNameEl.dataset.attributes);
+    console.log({
+      attributes
+    });
+    (0,react_dom_client__WEBPACK_IMPORTED_MODULE_0__.createRoot)(blockNameEl).render(/*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.Fragment, {
+      children: /*#__PURE__*/(0,react_jsx_runtime__WEBPACK_IMPORTED_MODULE_3__.jsx)(_Components_Frontend_BlockMain__WEBPACK_IMPORTED_MODULE_2__["default"], {
+        attributes: attributes
+      })
+    }));
+    blockNameEl?.removeAttribute('data-attributes');
+  });
+});
+
+/***/ }),
+
+/***/ "@wordpress/block-editor":
+/*!*************************************!*\
+  !*** external ["wp","blockEditor"] ***!
+  \*************************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["blockEditor"];
+
+/***/ }),
+
+/***/ "@wordpress/i18n":
+/*!******************************!*\
+  !*** external ["wp","i18n"] ***!
+  \******************************/
+/***/ ((module) => {
+
+module.exports = window["wp"]["i18n"];
+
+/***/ }),
+
+/***/ "react-dom":
+/*!***************************!*\
+  !*** external "ReactDOM" ***!
+  \***************************/
+/***/ ((module) => {
+
+module.exports = window["ReactDOM"];
+
+/***/ }),
+
+/***/ "react/jsx-runtime":
+/*!**********************************!*\
+  !*** external "ReactJSXRuntime" ***!
+  \**********************************/
+/***/ ((module) => {
+
+module.exports = window["ReactJSXRuntime"];
+
+/***/ })
+
+/******/ 	});
+/************************************************************************/
+/******/ 	// The module cache
+/******/ 	var __webpack_module_cache__ = {};
+/******/ 	
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/ 		// Check if module is in cache
+/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		if (cachedModule !== undefined) {
+/******/ 			return cachedModule.exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 			// no module.id needed
+/******/ 			// no module.loaded needed
+/******/ 			exports: {}
+/******/ 		};
+/******/ 	
+/******/ 		// Execute the module function
+/******/ 		__webpack_modules__[moduleId](module, module.exports, __webpack_require__);
+/******/ 	
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/ 	
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = __webpack_modules__;
+/******/ 	
+/************************************************************************/
+/******/ 	/* webpack/runtime/chunk loaded */
+/******/ 	(() => {
+/******/ 		var deferred = [];
+/******/ 		__webpack_require__.O = (result, chunkIds, fn, priority) => {
+/******/ 			if(chunkIds) {
+/******/ 				priority = priority || 0;
+/******/ 				for(var i = deferred.length; i > 0 && deferred[i - 1][2] > priority; i--) deferred[i] = deferred[i - 1];
+/******/ 				deferred[i] = [chunkIds, fn, priority];
+/******/ 				return;
+/******/ 			}
+/******/ 			var notFulfilled = Infinity;
+/******/ 			for (var i = 0; i < deferred.length; i++) {
+/******/ 				var [chunkIds, fn, priority] = deferred[i];
+/******/ 				var fulfilled = true;
+/******/ 				for (var j = 0; j < chunkIds.length; j++) {
+/******/ 					if ((priority & 1 === 0 || notFulfilled >= priority) && Object.keys(__webpack_require__.O).every((key) => (__webpack_require__.O[key](chunkIds[j])))) {
+/******/ 						chunkIds.splice(j--, 1);
+/******/ 					} else {
+/******/ 						fulfilled = false;
+/******/ 						if(priority < notFulfilled) notFulfilled = priority;
+/******/ 					}
+/******/ 				}
+/******/ 				if(fulfilled) {
+/******/ 					deferred.splice(i--, 1)
+/******/ 					var r = fn();
+/******/ 					if (r !== undefined) result = r;
+/******/ 				}
+/******/ 			}
+/******/ 			return result;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/define property getters */
+/******/ 	(() => {
+/******/ 		// define getter functions for harmony exports
+/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 			for(var key in definition) {
+/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 				}
+/******/ 			}
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
+/******/ 	(() => {
+/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/make namespace object */
+/******/ 	(() => {
+/******/ 		// define __esModule on exports
+/******/ 		__webpack_require__.r = (exports) => {
+/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 			}
+/******/ 			Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/jsonp chunk loading */
+/******/ 	(() => {
+/******/ 		// no baseURI
+/******/ 		
+/******/ 		// object to store loaded and loading chunks
+/******/ 		// undefined = chunk not loaded, null = chunk preloaded/prefetched
+/******/ 		// [resolve, reject, Promise] = chunk loading, 0 = chunk loaded
+/******/ 		var installedChunks = {
+/******/ 			"call-to-action-block/view": 0,
+/******/ 			"call-to-action-block/style-view": 0
+/******/ 		};
+/******/ 		
+/******/ 		// no chunk on demand loading
+/******/ 		
+/******/ 		// no prefetching
+/******/ 		
+/******/ 		// no preloaded
+/******/ 		
+/******/ 		// no HMR
+/******/ 		
+/******/ 		// no HMR manifest
+/******/ 		
+/******/ 		__webpack_require__.O.j = (chunkId) => (installedChunks[chunkId] === 0);
+/******/ 		
+/******/ 		// install a JSONP callback for chunk loading
+/******/ 		var webpackJsonpCallback = (parentChunkLoadingFunction, data) => {
+/******/ 			var [chunkIds, moreModules, runtime] = data;
+/******/ 			// add "moreModules" to the modules object,
+/******/ 			// then flag all "chunkIds" as loaded and fire callback
+/******/ 			var moduleId, chunkId, i = 0;
+/******/ 			if(chunkIds.some((id) => (installedChunks[id] !== 0))) {
+/******/ 				for(moduleId in moreModules) {
+/******/ 					if(__webpack_require__.o(moreModules, moduleId)) {
+/******/ 						__webpack_require__.m[moduleId] = moreModules[moduleId];
+/******/ 					}
+/******/ 				}
+/******/ 				if(runtime) var result = runtime(__webpack_require__);
+/******/ 			}
+/******/ 			if(parentChunkLoadingFunction) parentChunkLoadingFunction(data);
+/******/ 			for(;i < chunkIds.length; i++) {
+/******/ 				chunkId = chunkIds[i];
+/******/ 				if(__webpack_require__.o(installedChunks, chunkId) && installedChunks[chunkId]) {
+/******/ 					installedChunks[chunkId][0]();
+/******/ 				}
+/******/ 				installedChunks[chunkId] = 0;
+/******/ 			}
+/******/ 			return __webpack_require__.O(result);
+/******/ 		}
+/******/ 		
+/******/ 		var chunkLoadingGlobal = globalThis["webpackChunkcall_to_action_block"] = globalThis["webpackChunkcall_to_action_block"] || [];
+/******/ 		chunkLoadingGlobal.forEach(webpackJsonpCallback.bind(null, 0));
+/******/ 		chunkLoadingGlobal.push = webpackJsonpCallback.bind(null, chunkLoadingGlobal.push.bind(chunkLoadingGlobal));
+/******/ 	})();
+/******/ 	
+/************************************************************************/
+/******/ 	
+/******/ 	// startup
+/******/ 	// Load entry module and return exports
+/******/ 	// This entry module depends on other loaded chunks and execution need to be delayed
+/******/ 	var __webpack_exports__ = __webpack_require__.O(undefined, ["call-to-action-block/style-view"], () => (__webpack_require__("./src/call-to-action-block/view.js")))
+/******/ 	__webpack_exports__ = __webpack_require__.O(__webpack_exports__);
+/******/ 	
+/******/ })()
+;
+//# sourceMappingURL=view.js.map

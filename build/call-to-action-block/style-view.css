@@ -1,1 +1,70 @@
-.wp-block-create-block-call-to-action-block{align-items:center;background:linear-gradient(to bottom right,#0f2027,#203a43,#2c5364);color:#fff;display:flex;flex-direction:column;justify-content:center;overflow:hidden;padding:5rem 0;position:relative;text-align:center}.hero-content .main-heading{font-size:3rem;font-weight:700;margin-bottom:1rem}.hero-content .description{color:#fff;font-size:1.2rem;line-height:1.5;margin:0 auto 2rem;max-width:600px}.cta-button{background-color:#00c9a7;border:none;border-radius:50px;color:#fff;cursor:pointer;font-size:1rem;padding:.75rem 1.8rem;transition:all .3s ease}.cta-button:focus{outline:none}.cta-button:hover{background-color:#00b89c;transform:scale(1.05)}@keyframes bounce{0%,to{transform:translateY(0)}50%{transform:translateY(10px)}}@media(max-width:768px){.hero-content h1{font-size:2.2rem}.hero-content p{font-size:1rem}}
+/*!************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/call-to-action-block/style.scss ***!
+  \************************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied both on the front of your site
+ * and in the editor.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-call-to-action-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom right, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  text-align: center;
+  position: relative;
+  padding: 5rem 0;
+  overflow: hidden;
+}
+/* Hero content styling */
+.hero-content .main-heading {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+.hero-content .description {
+  font-size: 1.2rem;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.5;
+  color: #fff;
+}
+.cta-button {
+  background-color: #00c9a7;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.8rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.cta-button:focus {
+  outline: none;
+}
+.cta-button:hover {
+  background-color: #00b89c;
+  transform: scale(1.05);
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+}
+/* Responsive typography */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+  .hero-content p {
+    font-size: 1rem;
+  }
+}
+
+/*# sourceMappingURL=style-view.css.map*/
