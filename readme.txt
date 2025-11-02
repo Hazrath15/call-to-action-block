@@ -1,4 +1,4 @@
-=== Call To Action Block ===
+=== Advance Call To Action Block ===
 Contributors:      hazrathali
 Tags:              call-to-action, cta, gutenberg-block, marketing, landing-page,
 Requires at least: 6.7
