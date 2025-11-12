@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:       Advance Call To Action Block
- * Description:       A powerful and customizable Gutenberg block that helps you create attention-grabbing <code>call-to-action</code> sections with ease. Designed for modern WordPress websites, this block allows you to showcase messages, buttons, and offers that drive user engagement and conversions.
+ * Description:       A sleek, customizable Call to Action block for the WordPress block editor (Gutenberg) — perfect for driving clicks, signups, and conversions.
  * Version:           0.1.0
  * Requires at least: 6.7
  * Requires PHP:      7.4
