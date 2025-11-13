@@ -153,7 +153,7 @@ const Style = ({ attributes }) => {
 				/* -------------------------------------------------
 				   SECTION (container)
 				   ------------------------------------------------- */
-				.wp-block-create-block-call-to-action-block {
+				.wp-block-create-block-codence-cta-block {
 					background: ${backgroundCSS};
 					padding: ${sectionPad.desktop};
 					margin: ${sectionMar.desktop};
@@ -167,7 +167,7 @@ const Style = ({ attributes }) => {
 				/* -------------------------------------------------
 				   HEADING
 				   ------------------------------------------------- */
-				.wp-block-create-block-call-to-action-block .hero-content .main-heading {
+				.wp-block-create-block-codence-cta-block .hero-content .main-heading {
 					color: ${headingColor || 'inherit'};
 					${typo('heading', headingFontFamily, headingFontWeight, headingTextTransform,
                 headingFontSizeDesktop, headingLineHeightDesktop)}
@@ -178,7 +178,7 @@ const Style = ({ attributes }) => {
 				/* -------------------------------------------------
 				   DESCRIPTION
 				   ------------------------------------------------- */
-				.wp-block-create-block-call-to-action-block .hero-content .description {
+				.wp-block-create-block-codence-cta-block .hero-content .description {
 					color: ${descriptionColor || 'inherit'};
 					${typo('description', descriptionFontFamily, descriptionFontWeight, descriptionTextTransform,
                     descriptionFontSizeDesktop, descriptionLineHeightDesktop)}
@@ -189,7 +189,7 @@ const Style = ({ attributes }) => {
 				/* -------------------------------------------------
 				   BUTTON
 				   ------------------------------------------------- */
-				.wp-block-create-block-call-to-action-block .hero-content .cta-button {
+				.wp-block-create-block-codence-cta-block .hero-content .cta-button {
 					${typo('button', buttonFontFamily, buttonFontWeight, buttonTextTransform,
                         buttonFontSizeDesktop, buttonLineHeightDesktop)}
 					padding: ${buttonPad.desktop};
@@ -203,23 +203,23 @@ const Style = ({ attributes }) => {
 				   TABLET (≤1024px)
 				   ------------------------------------------------- */
 				@media (max-width: 1024px) {
-					.wp-block-create-block-call-to-action-block {
+					.wp-block-create-block-codence-cta-block {
 						padding: ${sectionPad.tablet};
 						margin: ${sectionMar.tablet};
 					}
-					.wp-block-create-block-call-to-action-block .hero-content .main-heading {
+					.wp-block-create-block-codence-cta-block .hero-content .main-heading {
 						font-size: ${headingFontSizeTablet || 32}px;
 						line-height: ${headingLineHeightTablet || 1.3};
 						padding: ${headingPad.tablet};
 						margin: ${headingMar.tablet};
 					}
-					.wp-block-create-block-call-to-action-block .hero-content .description {
+					.wp-block-create-block-codence-cta-block .hero-content .description {
 						font-size: ${descriptionFontSizeTablet || 15}px;
 						line-height: ${descriptionLineHeightTablet || 1.5};
 						padding: ${descPad.tablet};
 						margin: ${descMar.tablet};
 					}
-					.wp-block-create-block-call-to-action-block .hero-content .cta-button {
+					.wp-block-create-block-codence-cta-block .hero-content .cta-button {
 						font-size: ${buttonFontSizeTablet || 14}px;
 						line-height: ${buttonLineHeightTablet || 1.4};
 						padding: ${buttonPad.tablet};
@@ -231,23 +231,23 @@ const Style = ({ attributes }) => {
 				   MOBILE (≤767px)
 				   ------------------------------------------------- */
 				@media (max-width: 767px) {
-					.wp-block-create-block-call-to-action-block {
+					.wp-block-create-block-codence-cta-block {
 						padding: ${sectionPad.mobile};
 						margin: ${sectionMar.mobile};
 					}
-					.wp-block-create-block-call-to-action-block .hero-content .main-heading {
+					.wp-block-create-block-codence-cta-block .hero-content .main-heading {
 						font-size: ${headingFontSizeMobile || 24}px;
 						line-height: ${headingLineHeightMobile || 1.4};
 						padding: ${headingPad.mobile};
 						margin: ${headingMar.mobile};
 					}
-					.wp-block-create-block-call-to-action-block .hero-content .description {
+					.wp-block-create-block-codence-cta-block .hero-content .description {
 						font-size: ${descriptionFontSizeMobile || 14}px;
 						line-height: ${descriptionLineHeightMobile || 1.6};
 						padding: ${descPad.mobile};
 						margin: ${descMar.mobile};
 					}
-					.wp-block-create-block-call-to-action-block .hero-content .cta-button {
+					.wp-block-create-block-codence-cta-block .hero-content .cta-button {
 						font-size: ${buttonFontSizeMobile || 13}px;
 						line-height: ${buttonLineHeightMobile || 1.5};
 						padding: ${buttonPad.mobile};

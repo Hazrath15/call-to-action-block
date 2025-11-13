@@ -54,19 +54,19 @@ export default function DeviceSwitcher({ device, onChange, syncPreview = false, 
                 icon={desktop}
                 isPressed={device === 'desktop'}
                 onClick={() => handleClick('desktop')}
-                label={__('Desktop', 'dual-heading-block')}
+                label={__('Desktop', 'codence-cta-block')}
             />
             <Button
                 icon={tablet}
                 isPressed={device === 'tablet'}
                 onClick={() => handleClick('tablet')}
-                label={__('Tablet', 'dual-heading-block')}
+                label={__('Tablet', 'codence-cta-block')}
             />
             <Button
                 icon={mobile}
                 isPressed={device === 'mobile'}
                 onClick={() => handleClick('mobile')}
-                label={__('Mobile', 'dual-heading-block')}
+                label={__('Mobile', 'codence-cta-block')}
             />
         </ButtonGroup>
     );

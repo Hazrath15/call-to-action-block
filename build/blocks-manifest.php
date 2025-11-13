@@ -1,10 +1,10 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
-	'call-to-action-block' => array(
+	'codence-cta-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'create-block/call-to-action-block',
+		'name' => 'create-block/codence-cta-block',
 		'version' => '0.1.0',
 		'title' => 'Call To Action Block',
 		'category' => 'widgets',

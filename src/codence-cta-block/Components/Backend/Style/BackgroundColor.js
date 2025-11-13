@@ -12,20 +12,20 @@ const BackgroundColor = ({ attributes, setAttributes }) => {
     return (
         <>
             <SelectControl
-                label={__('Background Type', 'call-to-action-block')}
+                label={__('Background Type', 'codence-cta-block')}
                 value={bgType}
                 options={[
-                    { label: __('Solid Color', 'call-to-action-block'), value: 'color' },
-                    { label: __('Gradient', 'call-to-action-block'), value: 'gradient' },
+                    { label: __('Solid Color', 'codence-cta-block'), value: 'color' },
+                    { label: __('Gradient', 'codence-cta-block'), value: 'gradient' },
                 ]}
                 onChange={updateBgType}
             />
 
             {bgType === 'color' && (
                 <>
-                    <strong>{__('Background Color', 'call-to-action-block')}</strong>
+                    <strong>{__('Background Color', 'codence-cta-block')}</strong>
                     <ColorControl
-                        label={__('Choose Color', 'call-to-action-block')}
+                        label={__('Choose Color', 'codence-cta-block')}
                         value={bgColor}
                         onChange={(color) => setAttributes({ bgColor: color })}
                         defaultColor=""
@@ -36,9 +36,9 @@ const BackgroundColor = ({ attributes, setAttributes }) => {
 
             {bgType === 'gradient' && (
                 <>
-                    <strong>{__('Choose Gradient Background', 'call-to-action-block')}</strong>
+                    <strong>{__('Choose Gradient Background', 'codence-cta-block')}</strong>
                     <ColorControl
-                        label={__('Color 1', 'call-to-action-block')}
+                        label={__('Color 1', 'codence-cta-block')}
                         value={bgGradient1}
                         onChange={(color) => setAttributes({ bgGradient1: color })}
                         defaultColor=""
@@ -46,7 +46,7 @@ const BackgroundColor = ({ attributes, setAttributes }) => {
                     />
 
                     <ColorControl
-                        label={__('Color 2', 'call-to-action-block')}
+                        label={__('Color 2', 'codence-cta-block')}
                         value={bgGradient2}
                         onChange={(color) => setAttributes({ bgGradient2: color })}
                         defaultColor=""
@@ -54,7 +54,7 @@ const BackgroundColor = ({ attributes, setAttributes }) => {
                     />
 
                     <RangeControl
-                        label={__('Gradient Angle', 'call-to-action-block')}
+                        label={__('Gradient Angle', 'codence-cta-block')}
                         value={bgGradientAngle}
                         onChange={(value) => setAttributes({ bgGradientAngle: value })}
                         min={0}

@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Advance Call To Action Block
+ * Plugin Name:       Codence Call To Action Block
  * Description:       A sleek, customizable Call to Action block for the WordPress block editor (Gutenberg) — perfect for driving clicks, signups, and conversions.
  * Version:           0.1.0
  * Requires at least: 6.7
@@ -9,7 +9,7 @@
  * Author URI:        https://github.com/hazrath15
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       advance-call-to-action-block
+ * Text Domain:       codence-cta-block
  *
  * @package CreateBlock
  */

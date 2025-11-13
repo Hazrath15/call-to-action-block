@@ -11,9 +11,9 @@ function Settings({ attributes, setAttributes }) {
     return (
         <>
             <InspectorControls>
-                <PanelBody title={__('General', 'call-to-action-block')} initialOpen={true}>
+                <PanelBody title={__('General', 'codence-cta-block')} initialOpen={true}>
                     <SelectControl
-                        label={__('Heading HTML Tag', 'call-to-action-block')}
+                        label={__('Heading HTML Tag', 'codence-cta-block')}
                         value={headingTag}
                         options={[
                             { label: 'H1', value: 'h1' },
@@ -26,17 +26,17 @@ function Settings({ attributes, setAttributes }) {
                         onChange={(value) => setAttributes({ headingTag: value })}
                     />
                     <TextControl
-                        label={__('Heading Text', 'call-to-action-block')}
+                        label={__('Heading Text', 'codence-cta-block')}
                         value={attributes.heading}
                         onChange={(value) => setAttributes({ heading: value })}
                     />
                     <TextControl
-                        label={__('Description Text', 'call-to-action-block')}
+                        label={__('Description Text', 'codence-cta-block')}
                         value={attributes.description}
                         onChange={(value) => setAttributes({ description: value })}
                     />
                     <SelectControl
-                        label={__('Alignment', 'call-to-action-block')}
+                        label={__('Alignment', 'codence-cta-block')}
                         value={alignment}
                         options={[
                             { label: 'Left', value: 'start' },
@@ -46,21 +46,21 @@ function Settings({ attributes, setAttributes }) {
                         onChange={(value) => setAttributes({ alignment: value })}
                     />
                 </PanelBody>
-                <PanelBody title={__('Button', 'call-to-action-block')} initialOpen={false}>
+                <PanelBody title={__('Button', 'codence-cta-block')} initialOpen={false}>
                     <TextControl
-                        label={__('Button Text', 'call-to-action-block')}
+                        label={__('Button Text', 'codence-cta-block')}
                         value={buttonText}
                         onChange={(value) => setAttributes({ buttonText: value })}
                     />
                     <TextControl
-                        label={__('Button URL', 'call-to-action-block')}
+                        label={__('Button URL', 'codence-cta-block')}
                         value={buttonUrl}
                         onChange={(value) => setAttributes({ buttonUrl: value })}
                     />
                 </PanelBody>
             </InspectorControls>
             <InspectorControls group="styles">
-                <PanelBody title={__('Section Layout', 'call-to-action-block')} initialOpen={true}>
+                <PanelBody title={__('Section Layout', 'codence-cta-block')} initialOpen={true}>
                     <BackgroundColor attributes={attributes} setAttributes={setAttributes} />
                     <DimensionControl
                         label="Padding"
@@ -73,10 +73,10 @@ function Settings({ attributes, setAttributes }) {
                         onChange={(newVal) => setAttributes({ sectionMargin: newVal })}
                     />
                 </PanelBody>
-                <PanelBody title={__('Heading Styles', 'call-to-action-block')} initialOpen={false}>
+                <PanelBody title={__('Heading Styles', 'codence-cta-block')} initialOpen={false}>
                     <TypographyControl attributes={attributes} setAttributes={setAttributes} prefix="heading" />
                     <ColorControl
-                        label={__('Color', 'call-to-action-block')}
+                        label={__('Color', 'codence-cta-block')}
                         value={headingColor}
                         onChange={(color) => setAttributes({ headingColor: color })}
                         defaultColor=""
@@ -93,10 +93,10 @@ function Settings({ attributes, setAttributes }) {
                         onChange={(newVal) => setAttributes({ headingMargin: newVal })}
                     />
                 </PanelBody>
-                <PanelBody title={__('Description Styles', 'call-to-action-block')} initialOpen={false}>
+                <PanelBody title={__('Description Styles', 'codence-cta-block')} initialOpen={false}>
                     <TypographyControl attributes={attributes} setAttributes={setAttributes} prefix="description" />
                     <ColorControl
-                        label={__('Color', 'call-to-action-block')}
+                        label={__('Color', 'codence-cta-block')}
                         value={attributes.descriptionColor}
                         onChange={(color) => setAttributes({ descriptionColor: color })}
                         defaultColor=""
@@ -113,17 +113,17 @@ function Settings({ attributes, setAttributes }) {
                         onChange={(newVal) => setAttributes({ descriptionMargin: newVal })}
                     />
                 </PanelBody>
-                <PanelBody title={__('Button Styles', 'call-to-action-block')} initialOpen={false}>
+                <PanelBody title={__('Button Styles', 'codence-cta-block')} initialOpen={false}>
                     <TypographyControl attributes={attributes} setAttributes={setAttributes} prefix="button" />
                     <ColorControl
-                        label={__('Text Color', 'call-to-action-block')}
+                        label={__('Text Color', 'codence-cta-block')}
                         value={attributes.buttonTextColor}
                         onChange={(color) => setAttributes({ buttonTextColor: color })}
                         defaultColor=""
                         className="color-picker-control"
                     />
                     <ColorControl
-                        label={__('Background Color', 'call-to-action-block')}
+                        label={__('Background Color', 'codence-cta-block')}
                         value={attributes.buttonBgColor}
                         onChange={(color) => setAttributes({ buttonBgColor: color })}
                         defaultColor=""

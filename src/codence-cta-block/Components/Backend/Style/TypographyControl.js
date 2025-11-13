@@ -101,13 +101,13 @@ export const TypographyControl = ({ attributes, setAttributes, prefix }) => {
 
 			{isOpen && (
 				<Modal
-					title={__('Typography Settings', 'dual-heading-block')}
+					title={__('Typography Settings', 'codence-cta-block')}	
 					onRequestClose={() => setOpen(false)}
 					className="typography-modal"
 				>
 					<PanelRow>
 						<SelectControl
-							label={__('Font Family', 'dual-heading-block')}
+							label={__('Font Family', 'codence-cta-block')}
 							value={fontFamily}
 							options={[
 								{ label: 'Default', value: '' },
@@ -122,7 +122,7 @@ export const TypographyControl = ({ attributes, setAttributes, prefix }) => {
 
 					<PanelRow>
 						<RangeControl
-							label={`${__('Font Size', 'dual-heading-block')} (${device})`}
+							label={`${__('Font Size', 'codence-cta-block')} (${device})`}
 							value={fontSize}
 							onChange={(val) => updateAttr('FontSize', val)}
 							min={10}
@@ -132,7 +132,7 @@ export const TypographyControl = ({ attributes, setAttributes, prefix }) => {
 
 					<PanelRow>
 						<SelectControl
-							label={__('Font Weight', 'dual-heading-block')}
+							label={__('Font Weight', 'codence-cta-block')}
 							value={fontWeight}
 							options={[
 								{ label: 'Default', value: '' },
@@ -146,7 +146,7 @@ export const TypographyControl = ({ attributes, setAttributes, prefix }) => {
 
 					<PanelRow>
 						<SelectControl
-							label={__('Text Transform', 'dual-heading-block')}
+							label={__('Text Transform', 'codence-cta-block')}
 							value={textTransform}
 							options={[
 								{ label: 'None', value: 'none' },
@@ -160,7 +160,7 @@ export const TypographyControl = ({ attributes, setAttributes, prefix }) => {
 
 					<PanelRow>
 						<RangeControl
-							label={`${__('Line Height', 'dual-heading-block')} (${device})`}
+							label={`${__('Line Height', 'codence-cta-block')} (${device})`}
 							value={lineHeight}
 							onChange={(val) => updateAttr('LineHeight', val)}
 							min={0.8}
