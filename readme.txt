@@ -1,4 +1,4 @@
-=== Codence Call To Action Block ===
+=== Advanced Call To Action Block - An Ultimate CTA Section Design Block ===
 Contributors:      hazrathali
 Tags:              call-to-action, cta, gutenberg-block, marketing, landing-page,
 Requires at least: 6.7

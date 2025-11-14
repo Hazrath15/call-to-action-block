@@ -87,7 +87,7 @@ export const TypographyControl = ({ attributes, setAttributes, prefix }) => {
 	return (
 		<div className="typography-control-wrapper">
 			<div className="typography-btn-control">
-				<p>{__('Typography', 'dual-heading-block')}</p>
+				<p>{__('Typography', 'hazrath-advanced-call-to-action-block')}</p>	
 
                 {/* Responsive Device Switcher */}
                 <DeviceSwitcher device={device} onChange={setDevice} syncPreview />
@@ -101,13 +101,13 @@ export const TypographyControl = ({ attributes, setAttributes, prefix }) => {
 
 			{isOpen && (
 				<Modal
-					title={__('Typography Settings', 'codence-cta-block')}	
+					title={__('Typography Settings', 'hazrath-advanced-call-to-action-block')}	
 					onRequestClose={() => setOpen(false)}
 					className="typography-modal"
 				>
 					<PanelRow>
 						<SelectControl
-							label={__('Font Family', 'codence-cta-block')}
+							label={__('Font Family', 'hazrath-advanced-call-to-action-block')}
 							value={fontFamily}
 							options={[
 								{ label: 'Default', value: '' },
@@ -122,7 +122,7 @@ export const TypographyControl = ({ attributes, setAttributes, prefix }) => {
 
 					<PanelRow>
 						<RangeControl
-							label={`${__('Font Size', 'codence-cta-block')} (${device})`}
+							label={`${__('Font Size', 'hazrath-advanced-call-to-action-block')} (${device})`}
 							value={fontSize}
 							onChange={(val) => updateAttr('FontSize', val)}
 							min={10}
@@ -132,7 +132,7 @@ export const TypographyControl = ({ attributes, setAttributes, prefix }) => {
 
 					<PanelRow>
 						<SelectControl
-							label={__('Font Weight', 'codence-cta-block')}
+							label={__('Font Weight', 'hazrath-advanced-call-to-action-block')}
 							value={fontWeight}
 							options={[
 								{ label: 'Default', value: '' },
@@ -146,7 +146,7 @@ export const TypographyControl = ({ attributes, setAttributes, prefix }) => {
 
 					<PanelRow>
 						<SelectControl
-							label={__('Text Transform', 'codence-cta-block')}
+							label={__('Text Transform', 'hazrath-advanced-call-to-action-block')}
 							value={textTransform}
 							options={[
 								{ label: 'None', value: 'none' },
@@ -160,7 +160,7 @@ export const TypographyControl = ({ attributes, setAttributes, prefix }) => {
 
 					<PanelRow>
 						<RangeControl
-							label={`${__('Line Height', 'codence-cta-block')} (${device})`}
+							label={`${__('Line Height', 'hazrath-advanced-call-to-action-block')} (${device})`}
 							value={lineHeight}
 							onChange={(val) => updateAttr('LineHeight', val)}
 							min={0.8}
@@ -180,7 +180,7 @@ export const TypographyControl = ({ attributes, setAttributes, prefix }) => {
 
 						<FlexItem>
 							<Button isPrimary onClick={() => setOpen(false)}>
-								{__('Apply & Close', 'dual-heading-block')}
+								{__('Apply & Close', 'hazrath-advanced-call-to-action-block')}
 							</Button>
 						</FlexItem>
 					</Flex>

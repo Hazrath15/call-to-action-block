@@ -1,12 +1,12 @@
 <?php
 // This file is generated. Do not modify it manually.
 return array(
-	'codence-cta-block' => array(
+	'advanced-call-to-action-block' => array(
 		'$schema' => 'https://schemas.wp.org/trunk/block.json',
 		'apiVersion' => 3,
-		'name' => 'create-block/codence-cta-block',
+		'name' => 'hazrath/advanced-call-to-action-block',
 		'version' => '0.1.0',
-		'title' => 'Call To Action Block',
+		'title' => 'Advanced Call To Action Block',
 		'category' => 'widgets',
 		'icon' => 'megaphone',
 		'description' => 'A simple, customizable call-to-action block for Gutenberg.',
@@ -423,7 +423,7 @@ return array(
 				'full'
 			)
 		),
-		'textdomain' => 'call-to-action-block',
+		'textdomain' => 'hazrath-advanced-call-to-action-block',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-view.css',
