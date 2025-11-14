@@ -423,7 +423,7 @@ return array(
 				'full'
 			)
 		),
-		'textdomain' => 'hazrath-advanced-call-to-action-block',
+		'textdomain' => 'hazrath-advanced-cta-block',
 		'editorScript' => 'file:./index.js',
 		'editorStyle' => 'file:./index.css',
 		'style' => 'file:./style-view.css',

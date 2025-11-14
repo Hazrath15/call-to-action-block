@@ -9,7 +9,7 @@
  * Author URI:        https://github.com/hazrath15
  * License:           GPL-2.0-or-later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:       hazrath-advanced-call-to-action-block
+ * Text Domain:       hazrath-advanced-cta-block
  *
  * @package CreateBlock
  */

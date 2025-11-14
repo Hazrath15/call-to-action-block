@@ -12,20 +12,20 @@ const BackgroundColor = ({ attributes, setAttributes }) => {
     return (
         <>
             <SelectControl
-                label={__('Background Type', 'hazrath-advanced-call-to-action-block')}
+                label={__('Background Type', 'hazrath-advanced-cta-block')}
                 value={bgType}
                 options={[
-                    { label: __('Solid Color', 'hazrath-advanced-call-to-action-block'), value: 'color' },
-                    { label: __('Gradient', 'hazrath-advanced-call-to-action-block'), value: 'gradient' },
+                    { label: __('Solid Color', 'hazrath-advanced-cta-block'), value: 'color' },
+                    { label: __('Gradient', 'hazrath-advanced-cta-block'), value: 'gradient' },
                 ]}
                 onChange={updateBgType}
             />
 
             {bgType === 'color' && (
                 <>
-                    <strong>{__('Background Color', 'hazrath-advanced-call-to-action-block')}</strong>
+                    <strong>{__('Background Color', 'hazrath-advanced-cta-block')}</strong>
                     <ColorControl
-                        label={__('Choose Color', 'hazrath-advanced-call-to-action-block')}
+                        label={__('Choose Color', 'hazrath-advanced-cta-block')}
                         value={bgColor}
                         onChange={(color) => setAttributes({ bgColor: color })}
                         defaultColor=""
@@ -36,9 +36,9 @@ const BackgroundColor = ({ attributes, setAttributes }) => {
 
             {bgType === 'gradient' && (
                 <>
-                    <strong>{__('Choose Gradient Background', 'hazrath-advanced-call-to-action-block')}</strong>
+                    <strong>{__('Choose Gradient Background', 'hazrath-advanced-cta-block')}</strong>
                     <ColorControl
-                        label={__('Color 1', 'hazrath-advanced-call-to-action-block')}
+                        label={__('Color 1', 'hazrath-advanced-cta-block')}
                         value={bgGradient1}
                         onChange={(color) => setAttributes({ bgGradient1: color })}
                         defaultColor=""
@@ -46,7 +46,7 @@ const BackgroundColor = ({ attributes, setAttributes }) => {
                     />
 
                     <ColorControl
-                        label={__('Color 2', 'hazrath-advanced-call-to-action-block')}
+                        label={__('Color 2', 'hazrath-advanced-cta-block')}
                         value={bgGradient2}
                         onChange={(color) => setAttributes({ bgGradient2: color })}
                         defaultColor=""
@@ -54,7 +54,7 @@ const BackgroundColor = ({ attributes, setAttributes }) => {
                     />
 
                     <RangeControl
-                        label={__('Gradient Angle', 'hazrath-advanced-call-to-action-block')}
+                        label={__('Gradient Angle', 'hazrath-advanced-cta-block')}
                         value={bgGradientAngle}
                         onChange={(value) => setAttributes({ bgGradientAngle: value })}
                         min={0}

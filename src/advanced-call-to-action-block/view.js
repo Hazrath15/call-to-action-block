@@ -5,7 +5,7 @@ import './style.scss';
 import BlockName from './Components/Frontend/BlockMain';
 
 document.addEventListener('DOMContentLoaded', () => {
-	const blockNameEls = document.querySelectorAll('.wp-block-create-block-advanced-call-to-action-block');
+	const blockNameEls = document.querySelectorAll('.wp-block-hazrath-advanced-call-to-action-block');
     
 	blockNameEls.forEach(blockNameEl => {
 		const attributes = JSON.parse(blockNameEl.dataset.attributes);
