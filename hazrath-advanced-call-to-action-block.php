@@ -1,6 +1,6 @@
 <?php
 /**
- * Plugin Name:       Advanced Call To Action Block - An Ultimate CTA Section Design Block
+ * Plugin Name:       Hazrath Advanced Call To Action Block
  * Description:       A sleek, customizable Call to Action block for the WordPress block editor (Gutenberg) — perfect for driving clicks, signups, and conversions.
  * Version:           0.1.0
  * Requires at least: 6.7

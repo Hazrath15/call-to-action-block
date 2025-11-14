@@ -1,4 +1,4 @@
-=== Advanced Call To Action Block - An Ultimate CTA Section Design Block ===
+=== Hazrath Advanced Call To Action Block ===
 Contributors:      hazrathali
 Tags:              call-to-action, cta, gutenberg-block, marketing, landing-page,
 Requires at least: 6.7
@@ -61,6 +61,24 @@ An answer to that question.
 = What about foo bar? =
 
 Answer to foo bar dilemma.
+
+== Source Code ==
+
+The full uncompressed source code for this plugin is publicly available here:
+https://github.com/Hazrath15/call-to-action-block.git
+
+This repository includes all development files, including the 'src' directory,
+SCSS, JSX, build scripts, and instructions for generating the production build
+contained in the plugin.
+
+== Build Instructions ==
+
+Developers may rebuild the compiled assets using:
+1. npm install
+2. npm run build
+
+'npm run build' generates the final production files in the /build directory.
+'npm run start' runs development mode with file watching.
 
 == Screenshots ==
 
